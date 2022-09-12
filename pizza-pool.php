@@ -37,7 +37,7 @@ function pp_enqueue_scripts() {
 }
 
 // Check if the Woocommerce is activated
-if ( ! in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 // Including plugin files
 require plugin_dir_path( __FILE__ ) . 'includes/cart-calculations.php';
 require plugin_dir_path( __FILE__ ) . 'includes/time-calculation.php';
